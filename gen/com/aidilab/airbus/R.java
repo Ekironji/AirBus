@@ -162,8 +162,13 @@ public final class R {
         public static final int apptheme_tab_indicator_holo=0x7f030001;
         public static final int fragment_confort=0x7f030002;
         public static final int fragment_film=0x7f030003;
-        public static final int fragment_music=0x7f030004;
-        public static final int fragment_navigation_drawer=0x7f030005;
+        public static final int fragment_games=0x7f030004;
+        public static final int fragment_music=0x7f030005;
+        public static final int fragment_navigation_drawer=0x7f030006;
+        public static final int fragment_news=0x7f030007;
+        public static final int fragment_planecameras=0x7f030008;
+        public static final int fragment_shopping=0x7f030009;
+        public static final int fragment_usersocials=0x7f03000a;
     }
     public static final class menu {
         public static final int global=0x7f080000;
