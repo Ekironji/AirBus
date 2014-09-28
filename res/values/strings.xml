@@ -2,9 +2,7 @@
 <resources>
 
     <string name="app_name">AirBus</string>
-    <string name="title_film_section">Film</string>
-    <string name="title_music_section">Music</string>
-    <string name="title_confort_section">Confort</string>
+    
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
@@ -15,4 +13,13 @@
     
     <string name="titles">Titles</string>
 
+<!--     Nomi Fragment     -->
+    <string name="title_film_section">Film</string>
+    <string name="title_music_section">Music</string>
+    <string name="title_confort_section">Confort</string>
+    <string name="title_games_section">Games</string>
+    <string name="title_planecamera_section">Plane Camera</string>
+    <string name="title_news_section">News</string>
+    <string name="title_shopping_section">Shopping</string>
+    <string name="title_usersocial_section">User Social</string>
 </resources>

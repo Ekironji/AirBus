@@ -10,7 +10,12 @@ import android.view.MenuItem;
 
 import com.aidilab.airbus.fragment.ConfortFragment;
 import com.aidilab.airbus.fragment.FilmFragment;
+import com.aidilab.airbus.fragment.GamesFragment;
 import com.aidilab.airbus.fragment.MusicFragment;
+import com.aidilab.airbus.fragment.NewsFragment;
+import com.aidilab.airbus.fragment.PlaneCamerasFragment;
+import com.aidilab.airbus.fragment.ShoppingFragment;
+import com.aidilab.airbus.fragment.UserSocialsFragment;
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -63,6 +68,33 @@ public class MainActivity extends Activity
 		            .replace(R.id.container, new ConfortFragment())
 		            .commit();
     		break;
+    	case 3:
+	        fragmentManager.beginTransaction()
+	                .replace(R.id.container, new GamesFragment())
+	                .commit();
+	        break;
+    	case 4:
+	        fragmentManager.beginTransaction()
+	                .replace(R.id.container, new PlaneCamerasFragment())
+	                .commit();
+	        break;
+    	case 5:
+	        fragmentManager.beginTransaction()
+	                .replace(R.id.container, new NewsFragment())
+	                .commit();
+	        break;
+    	case 6:
+	        fragmentManager.beginTransaction()
+	                .replace(R.id.container, new ShoppingFragment())
+	                .commit();
+	        break;
+    	case 7:
+	        fragmentManager.beginTransaction()
+	                .replace(R.id.container, new UserSocialsFragment())
+	                .commit();
+	        break;
+    	default:
+    		break;
     		
     	}
     }
@@ -77,6 +109,24 @@ public class MainActivity extends Activity
                 break;
             case 3:
                 mTitle = getString(R.string.title_confort_section);
+                break;
+            case 4:
+                mTitle = getString(R.string.title_games_section);
+                break;
+            case 5:
+                mTitle = getString(R.string.title_planecamera_section);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_news_section);
+                break;
+            case 7:
+                mTitle = getString(R.string.title_shopping_section);
+                break;
+            case 8:
+                mTitle = getString(R.string.title_usersocial_section);
+                break;
+            default:
+            	mTitle = getString(R.string.app_name);
                 break;
         }
     }

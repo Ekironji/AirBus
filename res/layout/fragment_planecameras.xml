@@ -7,6 +7,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.aidilab.airbus.MainActivity$PlaceholderFragment" >
+    
+        <TextureView
+            android:id="@+id/camera_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true"
+            android:gravity="center"/>
 
 
 </RelativeLayout>
