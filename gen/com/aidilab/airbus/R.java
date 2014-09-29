@@ -11,7 +11,7 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int apptheme_color=0x7f040000;
+        public static final int apptheme_color=0x7f050000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -21,15 +21,15 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
         /** 
          Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html
     
          */
-        public static final int navigation_drawer_width=0x7f050002;
-        public static final int tab_host_default_height=0x7f050003;
+        public static final int navigation_drawer_width=0x7f060002;
+        public static final int tab_host_default_height=0x7f060003;
     }
     public static final class drawable {
         public static final int apptheme_activated_background_holo_light=0x7f020000;
@@ -151,22 +151,28 @@ public final class R {
         public static final int gpz550=0x7f020074;
         public static final int ic_drawer=0x7f020075;
         public static final int ic_launcher=0x7f020076;
+        public static final int movie1=0x7f020077;
+        public static final int movie2=0x7f020078;
+        public static final int movie3=0x7f020079;
+        public static final int movie4=0x7f02007a;
+        public static final int movie5=0x7f02007b;
+        public static final int playbutton=0x7f02007c;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000d;
-        public static final int categoriesLayout=0x7f090003;
-        public static final int categoriesListview=0x7f090005;
-        public static final int categoriesTextView=0x7f090004;
-        public static final int container=0x7f090001;
-        public static final int drawer_layout=0x7f090000;
-        public static final int imageView1=0x7f09000a;
-        public static final int navigation_drawer=0x7f090002;
-        public static final int relativeLayout1=0x7f090006;
-        public static final int textView1=0x7f090009;
-        public static final int textView2=0x7f09000b;
-        public static final int textView3=0x7f09000c;
-        public static final int titleListview=0x7f090008;
-        public static final int titlesTextView=0x7f090007;
+        public static final int action_settings=0x7f0a000d;
+        public static final int categoriesLayout=0x7f0a0003;
+        public static final int categoriesListview=0x7f0a0005;
+        public static final int categoriesTextView=0x7f0a0004;
+        public static final int container=0x7f0a0001;
+        public static final int drawer_layout=0x7f0a0000;
+        public static final int navigation_drawer=0x7f0a0002;
+        public static final int playButton=0x7f0a000c;
+        public static final int previewLayout=0x7f0a000a;
+        public static final int previewView=0x7f0a000b;
+        public static final int relativeLayout1=0x7f0a0006;
+        public static final int textView1=0x7f0a0009;
+        public static final int titleListview=0x7f0a0008;
+        public static final int titlesTextView=0x7f0a0007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -182,20 +188,23 @@ public final class R {
         public static final int fragment_usersocials=0x7f03000a;
     }
     public static final class menu {
-        public static final int global=0x7f080000;
-        public static final int main=0x7f080001;
+        public static final int global=0x7f090000;
+        public static final int main=0x7f090001;
+    }
+    public static final class raw {
+        public static final int aladdin=0x7f040000;
     }
     public static final class string {
-        public static final int action_example=0x7f060006;
-        public static final int action_settings=0x7f060007;
-        public static final int app_name=0x7f060000;
-        public static final int categories=0x7f060008;
-        public static final int navigation_drawer_close=0x7f060005;
-        public static final int navigation_drawer_open=0x7f060004;
-        public static final int title_confort_section=0x7f060003;
-        public static final int title_film_section=0x7f060001;
-        public static final int title_music_section=0x7f060002;
-        public static final int titles=0x7f060009;
+        public static final int action_example=0x7f070006;
+        public static final int action_settings=0x7f070007;
+        public static final int app_name=0x7f070000;
+        public static final int categories=0x7f070008;
+        public static final int navigation_drawer_close=0x7f070005;
+        public static final int navigation_drawer_open=0x7f070004;
+        public static final int title_confort_section=0x7f070003;
+        public static final int title_film_section=0x7f070001;
+        public static final int title_music_section=0x7f070002;
+        public static final int titles=0x7f070009;
     }
     public static final class style {
         /** 
@@ -219,21 +228,21 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
-        public static final int AutoCompleteTextViewAppTheme=0x7f070002;
-        public static final int ButtonAppTheme=0x7f070003;
-        public static final int ImageButtonAppTheme=0x7f070004;
-        public static final int ProgressBarAppTheme=0x7f070008;
-        public static final int RatingBarAppTheme=0x7f07000a;
-        public static final int SeekBarAppTheme=0x7f070009;
-        public static final int SpinnerAppTheme=0x7f070005;
-        public static final int TabAppTheme=0x7f070006;
-        public static final int TabTextAppTheme=0x7f070007;
-        public static final int ToggleAppTheme=0x7f07000b;
-        public static final int _AppTheme=0x7f07000c;
+        public static final int AppTheme=0x7f080001;
+        public static final int AutoCompleteTextViewAppTheme=0x7f080002;
+        public static final int ButtonAppTheme=0x7f080003;
+        public static final int ImageButtonAppTheme=0x7f080004;
+        public static final int ProgressBarAppTheme=0x7f080008;
+        public static final int RatingBarAppTheme=0x7f08000a;
+        public static final int SeekBarAppTheme=0x7f080009;
+        public static final int SpinnerAppTheme=0x7f080005;
+        public static final int TabAppTheme=0x7f080006;
+        public static final int TabTextAppTheme=0x7f080007;
+        public static final int ToggleAppTheme=0x7f08000b;
+        public static final int _AppTheme=0x7f08000c;
     }
 }
