@@ -8,5 +8,76 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.aidilab.airbus.MainActivity$PlaceholderFragment" >
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Temperature"
+        android:textSize="30dip" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginTop="40dip"
+        android:text="Fight Assistance"
+        android:textSize="30dip" />
+
+    <ImageButton
+        android:id="@+id/assistanceButton"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:src="@android:drawable/ic_popup_reminder" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView1" >
+
+        <Button
+            android:id="@+id/temMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - " />
+
+        <TextView
+            android:id="@+id/tempTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="22°"
+            android:textSize="50dip" />
+
+        <Button
+            android:id="@+id/tempPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" + " />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="40dip"
+        android:text="Lights"
+        android:textSize="30dip" />
 
 </RelativeLayout>

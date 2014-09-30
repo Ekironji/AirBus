@@ -57,7 +57,8 @@ public class NewsFragment extends Fragment implements OnClickListener{
         mImageButton6.setOnClickListener(this);
         mImageButton7.setOnClickListener(this);
         
-        mImageView = (ImageView) rootView.findViewById(R.id.imageView1);     		
+        mImageView = (ImageView) rootView.findViewById(R.id.imageView1);     	
+		mImageView.setBackgroundResource(R.drawable.cnn_news);
         
         return rootView;
     }
