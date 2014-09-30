@@ -1,8 +1,12 @@
 package com.aidilab.airbus;
 
+import org.udoo.adktoolkit.AdkManager;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Context;
+import android.hardware.usb.UsbManager;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
@@ -29,6 +33,8 @@ public class MainActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    
+	public static AdkManager mAdkManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,28 @@ public class MainActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        
+        mAdkManager = new AdkManager((UsbManager) getSystemService(Context.USB_SERVICE));
+        
+        registerReceiver(mAdkManager.getUsbReceiver(), mAdkManager.getDetachedFilter());
+    }
+    
+	@Override
+	public void onResume() {
+		super.onResume(); 
+		mAdkManager.open();
+	}
+ 
+	@Override
+	public void onPause() {
+		super.onPause();
+		mAdkManager.close();
+	}
+	
+	@Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(mAdkManager.getUsbReceiver());
     }
 
     @Override

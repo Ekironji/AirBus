@@ -4,6 +4,10 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <!-- Allows USB Accessory features -->
+    <uses-feature android:name="android.hardware.usb.accessory" />
+    
+    <!-- Allows camera features -->
     <uses-permission android:name="android.permission.CAMERA" />
  	<uses-feature android:name="android.hardware.camera" />
  
@@ -24,6 +28,16 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
+            <!-- Allows your application to be notified of an attached USB accessory -->
+			<intent-filter>
+				<action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+			</intent-filter>
+			
+			<!-- External XML resources file declares identifying information about the accessory that 
+			you want detect  -->
+			<meta-data android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+				android:resource="@xml/accessory_filter" />
         </activity>
     </application>
 
