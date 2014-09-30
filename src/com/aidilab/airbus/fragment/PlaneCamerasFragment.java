@@ -52,12 +52,12 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 
 	@Override
 	public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-		
+		Log.i(DEBUG, "onSurfaceTextureAvailable");
 		info = new Camera.CameraInfo();
-		
+//		Log.i(DEBUG, "num_camera: "+Camera.getNumberOfCameras());
 		for (int i = 0; i < Camera.getNumberOfCameras(); i++) {
             Camera.getCameraInfo(i, info);
-            Log.i(DEBUG, "id: "+i+"info: "+info.facing);
+            Log.i(DEBUG, "id: " + i + "info: " + info.facing);    
         }
 		
 		mCamera = Camera.open(0);
@@ -74,8 +74,9 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 			/* Tell the camera to write onto our textureView mTextureView */
 			mCamera.setPreviewTexture(surface);
 			mCamera.startPreview();
+			mCamera.autoFocus(null);
 		} catch (IOException ioe) {
-			Log.e("camera-reverse", ioe.getMessage());
+			Log.e(DEBUG, ioe.getMessage());
 		}
 	}
 
@@ -88,10 +89,11 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 	@Override
 	public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
 		Log.i(DEBUG, "onSurfaceTextureDestroyed");
-        if (null != mCamera) {
-            mCamera.stopPreview();
-            mCamera.release();
-        }
+//        if (null != mCamera) {
+//            mCamera.stopPreview();
+//            mCamera.release();
+//            mCamera = null;
+//        }
         return true;
 	}
 
@@ -100,13 +102,14 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 		
 	}
 	
-	public void onPause() {
-        super.onPause();
-        if (mCamera != null) {
-            mCamera.setPreviewCallback(null);
-            mCamera.stopPreview();
-            mCamera.release();
-            mCamera = null;
-        }
-    }
+//	public void onPause() {
+//        super.onPause();
+//		Log.i(DEBUG, "onPause");
+//        if (mCamera != null) {
+//            mCamera.setPreviewCallback(null);
+//            mCamera.stopPreview();
+//            mCamera.release();
+//            mCamera = null;
+//        }
+//    }
 }
