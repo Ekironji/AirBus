@@ -159,7 +159,8 @@ public final class R {
         public static final int playbutton=0x7f02007c;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000d;
+        public static final int action_settings=0x7f0a000e;
+        public static final int camera_texture=0x7f0a000d;
         public static final int categoriesLayout=0x7f0a0003;
         public static final int categoriesListview=0x7f0a0005;
         public static final int categoriesTextView=0x7f0a0004;
@@ -195,16 +196,23 @@ public final class R {
         public static final int aladdin=0x7f040000;
     }
     public static final class string {
-        public static final int action_example=0x7f070006;
-        public static final int action_settings=0x7f070007;
+        public static final int action_example=0x7f070003;
+        public static final int action_settings=0x7f070004;
         public static final int app_name=0x7f070000;
-        public static final int categories=0x7f070008;
-        public static final int navigation_drawer_close=0x7f070005;
-        public static final int navigation_drawer_open=0x7f070004;
-        public static final int title_confort_section=0x7f070003;
-        public static final int title_film_section=0x7f070001;
-        public static final int title_music_section=0x7f070002;
-        public static final int titles=0x7f070009;
+        public static final int categories=0x7f070005;
+        public static final int navigation_drawer_close=0x7f070002;
+        public static final int navigation_drawer_open=0x7f070001;
+        public static final int title_confort_section=0x7f070009;
+        /**      Nomi Fragment     
+         */
+        public static final int title_film_section=0x7f070007;
+        public static final int title_games_section=0x7f07000a;
+        public static final int title_music_section=0x7f070008;
+        public static final int title_news_section=0x7f07000c;
+        public static final int title_planecamera_section=0x7f07000b;
+        public static final int title_shopping_section=0x7f07000d;
+        public static final int title_usersocial_section=0x7f07000e;
+        public static final int titles=0x7f070006;
     }
     public static final class style {
         /** 

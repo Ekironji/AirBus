@@ -53,11 +53,11 @@ public class FilmFragment extends Fragment implements OnClickListener{
         
         String[] values = new String[] { "Action", "Cartoon", "Commedy", "Series", "Thriller"};
          
-        String[] action    = new String[] {"Expen", "indiana Jones", "Commedy"};
-        String[] cartoon   = new String[] {"Aladdin", "Lion King",};
-        String[] commedy   = new String[] {"Advenfsdfture", "Acgfgfgftion", "Commedy"};
-        String[] series    = new String[] {"Advfdsfsdfenture", "Action", "Commgfgfgfgedy"};
-        String[] thriller  = new String[] {"cane", "gatto", "Commedy"};
+        String[] action    = new String[] {"Superman Returns", "Indiana Jones"};
+        String[] cartoon   = new String[] {"Aladdin", "The Lion King"};
+        String[] commedy   = new String[] {"The Hangover"};
+        String[] series    = new String[] {};
+        String[] thriller  = new String[] {};
         
         final int[] copertine = {R.drawable.movie1,
         		R.drawable.movie2,
