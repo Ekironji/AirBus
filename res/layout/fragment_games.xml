@@ -24,8 +24,8 @@
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
+		        android:layout_width="300dp"
+		        android:layout_height="300dp"
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignParentTop="true" 
 		        android:src="@drawable/fruitninja"
@@ -34,20 +34,16 @@
 		
 		    <TextView
 		        android:id="@+id/title1"
-		        android:layout_width="wrap_content"
+		        android:layout_width="300dp"
 		        android:layout_height="wrap_content"
 		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton1"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_marginTop="20dp"
 		        android:text="Fruit Ninja"
-		    	android:textStyle="bold" />
-		
-		    <TextView
-		        android:id="@+id/descr1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
-		        android:layout_below="@+id/title1"
-		        android:text="TextView" />
+		        android:textSize="20sp"
+		        android:textStyle="bold" />
 	
 		</RelativeLayout>
 		
@@ -58,8 +54,8 @@
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton2"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
+		        android:layout_width="300dp"
+		        android:layout_height="300dp"
 		        android:layout_alignParentTop="true"
 		        android:src="@drawable/jetpack"
 		        android:scaleType="centerInside"
@@ -67,20 +63,16 @@
 		    
 		    <TextView
 		        android:id="@+id/title2"
-		        android:layout_width="wrap_content"
+		        android:layout_width="300dp"
 		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton2"
+		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton2"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_marginTop="20dp"
 		        android:text="Jetpack Joyride" 
+		        android:textSize="20sp"
 		        android:textStyle="bold"/>
-		
-		    <TextView
-		        android:id="@+id/descr2"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton2"
-		        android:layout_below="@+id/title2"
-		        android:text="TextView" />
 		
 	    </RelativeLayout>
 	    
@@ -91,29 +83,25 @@
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton3"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
+		        android:layout_width="300dp"
+		        android:layout_height="300dp"
 		        android:src="@drawable/angrybirds"
 		        android:scaleType="centerInside"
 		        android:background="@android:color/transparent"/>
 		
 		    <TextView
 		        android:id="@+id/title3"
-		        android:layout_width="wrap_content"
+		        android:layout_width="300dp"
 		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton3"
+		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton3"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_marginTop="20dp"
 		        android:text="Angry Birds"
+		        android:textSize="20sp"
 		        android:textStyle="bold" />
 		
-		    <TextView
-		        android:id="@+id/descr3"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton3"
-		        android:layout_below="@+id/title3"
-		        android:text="TextView" />
-
 	    </RelativeLayout>
 	</LinearLayout>
 	
@@ -131,8 +119,8 @@
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton4"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
+		        android:layout_width="300dp"
+		        android:layout_height="300dp"
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignParentTop="true" 
 		        android:src="@drawable/fruitninja"
@@ -141,20 +129,16 @@
 		
 		    <TextView
 		        android:id="@+id/title4"
-		        android:layout_width="wrap_content"
+		        android:layout_width="300dp"
 		        android:layout_height="wrap_content"
 		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton4"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_marginTop="20dp"
 		        android:text="Fruit Ninja"
+		        android:textSize="20sp"
 		    	android:textStyle="bold" />
-		
-		    <TextView
-		        android:id="@+id/descr4"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
-		        android:layout_below="@+id/title4"
-		        android:text="TextView" />
 	
 		</RelativeLayout>
 		
@@ -165,8 +149,8 @@
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton5"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
+		        android:layout_width="300dp"
+		        android:layout_height="300dp"
 		        android:layout_alignParentTop="true"
 		        android:src="@drawable/jetpack"
 		        android:scaleType="centerInside"
@@ -174,21 +158,17 @@
 		    
 		    <TextView
 		        android:id="@+id/title5"
-		        android:layout_width="wrap_content"
+		        android:layout_width="300dp"
 		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton5"
+		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton5"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_marginTop="20dp"
 		        android:text="Jetpack Joyride" 
+		        android:textSize="20sp"
 		        android:textStyle="bold"/>
-		
-		    <TextView
-		        android:id="@+id/descr5"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton5"
-		        android:layout_below="@+id/title5"
-		        android:text="TextView" />
-		
+
 	    </RelativeLayout>
 	    
         <RelativeLayout 
@@ -198,30 +178,26 @@
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton6"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
+		        android:layout_width="300dp"
+		        android:layout_height="300dp"
 		        android:src="@drawable/angrybirds"
 		        android:scaleType="centerInside"
 		        android:background="@android:color/transparent"/>
 		
 		    <TextView
 		        android:id="@+id/title6"
-		        android:layout_width="wrap_content"
+		        android:layout_width="300dp"
 		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton6"
+		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton6"
+		        android:layout_centerHorizontal="true"
+		        android:gravity="center"
+		        android:layout_marginTop="20dp"
 		        android:text="Angry Birds"
+		        android:textSize="20sp"
 		        android:textStyle="bold" />
 		
-		    <TextView
-		        android:id="@+id/descr6"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_alignLeft="@+id/imageButton6"
-		        android:layout_below="@+id/title6"
-		        android:text="TextView" />
-
-	    </RelativeLayout>
+		     </RelativeLayout>
 	</LinearLayout>
 
 </LinearLayout>
