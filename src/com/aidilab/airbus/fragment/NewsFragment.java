@@ -2,6 +2,7 @@ package com.aidilab.airbus.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,12 +69,18 @@ public class NewsFragment extends Fragment implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
+		Intent LaunchIntent = null;
 		switch(v.getId()){
 		case R.id.imageButton1:
+			LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("flipboard.app");
+		    startActivity(LaunchIntent);
 			break;
 		case R.id.imageButton2:
+			LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.google.android.apps.magazines");
+		    startActivity(LaunchIntent);
 			break;
 		case R.id.imageButton3:
+			
 			break;
 		case R.id.imageButton4:
 			mImageView.setBackgroundResource(R.drawable.cnn_news);

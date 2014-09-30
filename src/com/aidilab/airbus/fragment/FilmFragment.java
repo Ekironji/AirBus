@@ -160,10 +160,8 @@ public class FilmFragment extends Fragment implements OnClickListener{
 	public void onClick(View v) {
 		Log.i("filmFragment","onClick");
 		if(v.getId() == (R.id.playButton)){
-			//Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(movieurl));
-			String uri = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.aladdin;
-			Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-			getActivity().startActivity(intent);
+			Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("org.videolan.vlc.betav7neon");
+		    startActivity(LaunchIntent);
 		}
 	}
       

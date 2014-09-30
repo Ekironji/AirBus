@@ -6,7 +6,55 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.aidilab.airbus.MainActivity$PlaceholderFragment" >
+    android:background="@drawable/background_airbus_sfumato" >
 
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" 
+        android:padding="10dip">
+
+        <ImageButton
+            android:id="@+id/facebookButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fb"
+            android:background="@null" />
+        
+        <ImageButton
+            android:id="@+id/googlePlusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gp"
+            android:background="@null" />
+        
+        <ImageButton
+            android:id="@+id/twitterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twitter" 
+            android:background="@null"/>
+
+
+        <ImageButton
+            android:id="@+id/instagramButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/inst"
+            android:background="@null" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:textSize="30dip"
+        android:text="Log in to your socials" />
 
 </RelativeLayout>
