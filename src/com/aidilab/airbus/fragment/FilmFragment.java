@@ -7,17 +7,23 @@ import java.util.List;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.aidilab.airbus.R;
 
-public class FilmFragment extends Fragment {
+public class FilmFragment extends Fragment implements OnClickListener{
     /**
      * Returns a new instance of this fragment for the given section
      * number.
@@ -31,37 +37,75 @@ public class FilmFragment extends Fragment {
     }
 
     
+    private ListView titleListview = null;
+    View rootView;
+    ImageView previewImage = null;
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_film, container, false);
+        rootView = inflater.inflate(R.layout.fragment_film, container, false);
         
-        final ListView listview = (ListView) rootView.findViewById(R.id.categoriesListview);
-        String[] values = new String[] { "Adventure", "Action", "Commedy", "Series", "Thriller"};
+        final ListView categoryListview = (ListView) rootView.findViewById(R.id.categoriesListview);
+        titleListview    = (ListView) rootView.findViewById(R.id.titleListview);
+        previewImage     = (ImageView) rootView.findViewById(R.id.previewView);
+        
+        
+        String[] values = new String[] { "Action", "Cartoon", "Commedy", "Series", "Thriller"};
+         
+        String[] action    = new String[] {"Expen", "indiana Jones", "Commedy"};
+        String[] cartoon   = new String[] {"Aladdin", "Lion King",};
+        String[] commedy   = new String[] {"Advenfsdfture", "Acgfgfgftion", "Commedy"};
+        String[] series    = new String[] {"Advfdsfsdfenture", "Action", "Commgfgfgfgedy"};
+        String[] thriller  = new String[] {"cane", "gatto", "Commedy"};
+        
+        final int[] copertine = {R.drawable.movie1,
+        		R.drawable.movie2,
+        		R.drawable.movie3,
+        		R.drawable.movie4,
+        		R.drawable.movie5 };
+        
+        final ArrayList<String[]> titoli = new ArrayList<String[]>();
+        titoli.add(action);
+        titoli.add(cartoon);
+        titoli.add(commedy);
+        titoli.add(series);
+        titoli.add(thriller);
+        
+        if (rootView != null) {
+            ImageButton mButton = (ImageButton) rootView.findViewById(R.id.playButton);
+            Log.d("", "View is not null");
+
+            if (mButton != null) {
+            	mButton.setOnClickListener(this);
+                Log.d("", "mButton is not null");
+            }
+        }
         
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
-          list.add(values[i]);
+        	list.add(values[i]);
         }
         final StableArrayAdapter adapter = new StableArrayAdapter(rootView.getContext(),
             android.R.layout.simple_list_item_1, list);
-        listview.setAdapter(adapter);
+        categoryListview.setAdapter(adapter);
         
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        categoryListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view,
                 int position, long id) {
               final String item = (String) parent.getItemAtPosition(position);
-              view.animate().setDuration(2000).alpha(0)
-                  .withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                      list.remove(item);
-                      adapter.notifyDataSetChanged();
-                      view.setAlpha(1);
-                    }
-                  });
+              updateTitleList(titoli.get(position));
+            }
+
+          });
+        
+        titleListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, final View view,
+                int position, long id) {
+              final String item = (String) parent.getItemAtPosition(position);
+              previewImage.setImageResource(copertine[position]);
             }
 
           });
@@ -73,6 +117,18 @@ public class FilmFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+    }
+    
+    
+    
+    private void updateTitleList(String[] values){
+    	final ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < values.length; ++i) {
+        	list.add(values[i]);
+        }
+        final StableArrayAdapter adapter = new StableArrayAdapter(rootView.getContext(),
+            android.R.layout.simple_list_item_1, list);
+        titleListview.setAdapter(adapter);
     }
     
     
@@ -98,5 +154,17 @@ public class FilmFragment extends Fragment {
           return true;
         }
     }
+
+
+	@Override
+	public void onClick(View v) {
+		Log.i("filmFragment","onClick");
+		if(v.getId() == (R.id.playButton)){
+			//Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(movieurl));
+			String uri = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.aladdin;
+			Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+			getActivity().startActivity(intent);
+		}
+	}
       
 }
