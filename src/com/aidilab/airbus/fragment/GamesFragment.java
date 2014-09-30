@@ -2,10 +2,13 @@ package com.aidilab.airbus.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.aidilab.airbus.R;
 
@@ -26,6 +29,35 @@ public class GamesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_games, container, false);
+        
+        ImageButton game1 = (ImageButton) rootView.findViewById(R.id.imageButton1);
+        game1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.halfbrick.fruitninjafree");
+		        startActivity(LaunchIntent);
+			}
+		});
+        ImageButton game2 = (ImageButton) rootView.findViewById(R.id.imageButton2);
+        game2.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.halfbrick.jetpackjoyride");
+		        startActivity(LaunchIntent);
+			}
+		});
+        ImageButton game3 = (ImageButton) rootView.findViewById(R.id.imageButton3);
+        game3.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.rovio.angrybirds");
+		        startActivity(LaunchIntent);
+			}
+		});
+        
         return rootView;
     }
 

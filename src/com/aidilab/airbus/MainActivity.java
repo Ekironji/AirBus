@@ -14,8 +14,8 @@ import com.aidilab.airbus.fragment.GamesFragment;
 import com.aidilab.airbus.fragment.MusicFragment;
 import com.aidilab.airbus.fragment.NewsFragment;
 import com.aidilab.airbus.fragment.PlaneCamerasFragment;
+import com.aidilab.airbus.fragment.ShoppingFragment;
 import com.aidilab.airbus.fragment.UserSocialsFragment;
-import com.aidilab.airbus.fragment.shopping.ShoppingFragment;
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {

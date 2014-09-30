@@ -55,12 +55,16 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 		Log.i(DEBUG, "onSurfaceTextureAvailable");
 		info = new Camera.CameraInfo();
 //		Log.i(DEBUG, "num_camera: "+Camera.getNumberOfCameras());
-		for (int i = 0; i < Camera.getNumberOfCameras(); i++) {
-            Camera.getCameraInfo(i, info);
-            Log.i(DEBUG, "id: " + i + "info: " + info.facing);    
-        }
+//		for (int i = 0; i < Camera.getNumberOfCameras(); i++) {
+//            Camera.getCameraInfo(i, info);
+//            Log.i(DEBUG, "id: " + i + "info: " + info.facing);    
+//        }
 		
-		mCamera = Camera.open(0);
+		try {
+			mCamera = Camera.open(0);
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+		}
 		
         if (null == mCamera) {
             Toast toast = Toast.makeText(getActivity().getApplicationContext(), "No camera", Toast.LENGTH_LONG);
@@ -89,11 +93,11 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 	@Override
 	public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
 		Log.i(DEBUG, "onSurfaceTextureDestroyed");
-//        if (null != mCamera) {
-//            mCamera.stopPreview();
-//            mCamera.release();
-//            mCamera = null;
-//        }
+        if (null != mCamera) {
+            mCamera.stopPreview();
+            mCamera.release();
+            mCamera = null;
+        }
         return true;
 	}
 
@@ -102,14 +106,12 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
 		
 	}
 	
-//	public void onPause() {
-//        super.onPause();
-//		Log.i(DEBUG, "onPause");
-//        if (mCamera != null) {
-//            mCamera.setPreviewCallback(null);
-//            mCamera.stopPreview();
-//            mCamera.release();
-//            mCamera = null;
-//        }
-//    }
+	public void onPause() {
+        super.onPause();
+		Log.i(DEBUG, "onPause");
+        if (mCamera != null) {
+            mCamera.setPreviewCallback(null);
+            mCamera.stopPreview();
+        }
+    }
 }
