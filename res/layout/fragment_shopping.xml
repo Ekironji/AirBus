@@ -21,17 +21,45 @@
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     -->
 
-    <FrameLayout
-        android:id="@+id/product_list"
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@android:layout/list_content" />
+        android:layout_weight="1">
+        
+        <TextView
+            android:id="@+id/categoriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dip"
+            android:layout_marginBottom="20dip"
+            android:text="@string/categories"
+            android:textSize="28sp" />
+        
+        <ListView
+	         android:id="@+id/categoriesListview"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_below="@+id/categoriesTextView" >
+        </ListView>
+        
+    </RelativeLayout>
 
-    <FrameLayout
-        android:id="@+id/product_detail_container"
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3" />
+        android:layout_weight="3"
+        android:background="@android:color/white" >
+        
+        <GridView
+	        android:id="@+id/gridViewCustom"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10dp"
+	        android:columnWidth="300dp"
+	        android:gravity="center"
+	        android:numColumns="auto_fit"
+	        android:stretchMode="columnWidth" />
+        
+    </RelativeLayout>
 
 </LinearLayout>
