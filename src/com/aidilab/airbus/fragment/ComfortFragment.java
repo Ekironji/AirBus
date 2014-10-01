@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -34,11 +33,11 @@ public class ComfortFragment extends Fragment implements OnClickListener{
     public ComfortFragment() {}
     
     int temp = 20;
-    String degSymbol = "�";
+    String degSymbol = "°";
     
     TextView tempTextView      = null;
-    Button tempMinus           = null;
-    Button tempPlus            = null;
+    ImageButton tempMinus      = null;
+    ImageButton tempPlus       = null;
     ImageButton callAssistance = null;
     SeekBar lightIntensity     = null; 
     
@@ -49,10 +48,10 @@ public class ComfortFragment extends Fragment implements OnClickListener{
         View rootView = inflater.inflate(R.layout.fragment_comfort, container, false);
         
         tempTextView = (TextView) rootView.findViewById(R.id.tempTextview);
-        tempMinus = (Button) rootView.findViewById(R.id.temMinus);
-        tempPlus = (Button) rootView.findViewById(R.id.tempPlus);
+        tempMinus = (ImageButton) rootView.findViewById(R.id.temMinus);
+        tempPlus = (ImageButton) rootView.findViewById(R.id.tempPlus);
         callAssistance  = (ImageButton) rootView.findViewById(R.id.assistanceButton);
-        lightIntensity = (SeekBar) rootView.findViewById(R.id.seekBar1);  
+        lightIntensity = (SeekBar) rootView.findViewById(R.id.seekBarLight);  
         lightIntensity.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			
 			@Override

@@ -23,7 +23,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="Channels"
-        android:textSize="30dip" />
+        android:textSize="30sp"
+        android:textColor="@android:color/white" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -76,7 +77,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="Your news"
-        android:textSize="30dip" />
+        android:textSize="30sp"
+        android:textColor="@android:color/white" />
 
     <ImageButton
         android:id="@+id/imageButton1"

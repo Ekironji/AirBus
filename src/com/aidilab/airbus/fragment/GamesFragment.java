@@ -57,6 +57,33 @@ public class GamesFragment extends Fragment {
 		        startActivity(LaunchIntent);
 			}
 		});
+        ImageButton game4 = (ImageButton) rootView.findViewById(R.id.imageButton4);
+        game4.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.king.candycrushsaga");
+		        startActivity(LaunchIntent);
+			}
+		});
+        ImageButton game5 = (ImageButton) rootView.findViewById(R.id.imageButton5);
+        game5.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.creativemobile.DragRacing");
+		        startActivity(LaunchIntent);
+			}
+		});
+        ImageButton game6 = (ImageButton) rootView.findViewById(R.id.imageButton6);
+        game6.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.brainium.solitairefree");
+		        startActivity(LaunchIntent);
+			}
+		});
         
         return rootView;
     }

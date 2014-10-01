@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="10dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="10dp"
     tools:context="com.aidilab.airbus.MainActivity$PlaceholderFragment" 
     android:orientation="vertical">
 
@@ -14,18 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
         
         <RelativeLayout 
             android:layout_width="wrap_content"
         	android:layout_height="match_parent"
-        	android:padding="10dp">
+        	android:padding="5dp"
+        	android:layout_marginRight="10dp">
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton1"
-		        android:layout_width="300dp"
-		        android:layout_height="300dp"
+		        android:layout_width="250dp"
+		        android:layout_height="250dp"
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignParentTop="true" 
 		        android:src="@drawable/fruitninja"
@@ -34,15 +35,15 @@
 		
 		    <TextView
 		        android:id="@+id/title1"
-		        android:layout_width="300dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton1"
 		        android:layout_centerHorizontal="true"
 		        android:gravity="center"
-		        android:layout_marginTop="20dp"
+		        android:layout_marginTop="8dp"
+		        android:textColor="@android:color/white"
 		        android:text="Fruit Ninja"
-		        android:textSize="20sp"
+		        android:textSize="15sp"
 		        android:textStyle="bold" />
 	
 		</RelativeLayout>
@@ -50,12 +51,14 @@
         <RelativeLayout 
             android:layout_width="wrap_content"
         	android:layout_height="match_parent"
-        	android:padding="10dp">
+        	android:padding="5dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginLeft="10dp">
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton2"
-		        android:layout_width="300dp"
-		        android:layout_height="300dp"
+		        android:layout_width="250dp"
+		        android:layout_height="250dp"
 		        android:layout_alignParentTop="true"
 		        android:src="@drawable/jetpack"
 		        android:scaleType="centerInside"
@@ -63,15 +66,15 @@
 		    
 		    <TextView
 		        android:id="@+id/title2"
-		        android:layout_width="300dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton2"
 		        android:layout_centerHorizontal="true"
 		        android:gravity="center"
-		        android:layout_marginTop="20dp"
+		        android:layout_marginTop="8dp"
+		        android:textColor="@android:color/white"
 		        android:text="Jetpack Joyride" 
-		        android:textSize="20sp"
+		        android:textSize="15sp"
 		        android:textStyle="bold"/>
 		
 	    </RelativeLayout>
@@ -79,27 +82,28 @@
         <RelativeLayout 
             android:layout_width="wrap_content"
         	android:layout_height="match_parent"
-        	android:padding="10dp">
+        	android:padding="5dp"
+        	android:layout_marginLeft="10dp">
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton3"
-		        android:layout_width="300dp"
-		        android:layout_height="300dp"
+		        android:layout_width="250dp"
+		        android:layout_height="250dp"
 		        android:src="@drawable/angrybirds"
 		        android:scaleType="centerInside"
 		        android:background="@android:color/transparent"/>
 		
 		    <TextView
 		        android:id="@+id/title3"
-		        android:layout_width="300dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton3"
 		        android:layout_centerHorizontal="true"
 		        android:gravity="center"
-		        android:layout_marginTop="20dp"
+		        android:layout_marginTop="8dp"
+		        android:textColor="@android:color/white"
 		        android:text="Angry Birds"
-		        android:textSize="20sp"
+		        android:textSize="15sp"
 		        android:textStyle="bold" />
 		
 	    </RelativeLayout>
@@ -109,35 +113,36 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
         
         <RelativeLayout 
             android:layout_width="wrap_content"
         	android:layout_height="match_parent"
-        	android:padding="10dp">
+        	android:padding="5dp"
+        	android:layout_marginRight="10dp">
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton4"
-		        android:layout_width="300dp"
-		        android:layout_height="300dp"
+		        android:layout_width="250dp"
+		        android:layout_height="250dp"
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignParentTop="true" 
-		        android:src="@drawable/fruitninja"
+		        android:src="@drawable/candycrush"
 		        android:scaleType="centerInside"
 		        android:background="@android:color/transparent"/>
 		
 		    <TextView
 		        android:id="@+id/title4"
-		        android:layout_width="300dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton4"
 		        android:layout_centerHorizontal="true"
 		        android:gravity="center"
-		        android:layout_marginTop="20dp"
-		        android:text="Fruit Ninja"
-		        android:textSize="20sp"
+		        android:layout_marginTop="8dp"
+		        android:textColor="@android:color/white"
+		        android:text="Candy Crush"
+		        android:textSize="15sp"
 		    	android:textStyle="bold" />
 	
 		</RelativeLayout>
@@ -145,28 +150,30 @@
         <RelativeLayout 
             android:layout_width="wrap_content"
         	android:layout_height="match_parent"
-        	android:padding="10dp">
+        	android:padding="5dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginLeft="10dp">
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton5"
-		        android:layout_width="300dp"
-		        android:layout_height="300dp"
+		        android:layout_width="250dp"
+		        android:layout_height="250dp"
 		        android:layout_alignParentTop="true"
-		        android:src="@drawable/jetpack"
+		        android:src="@drawable/dragracing"
 		        android:scaleType="centerInside"
 		        android:background="@android:color/transparent" />
 		    
 		    <TextView
 		        android:id="@+id/title5"
-		        android:layout_width="300dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton5"
 		        android:layout_centerHorizontal="true"
 		        android:gravity="center"
-		        android:layout_marginTop="20dp"
-		        android:text="Jetpack Joyride" 
-		        android:textSize="20sp"
+		        android:layout_marginTop="8dp"
+		        android:textColor="@android:color/white"
+		        android:text="Drag Racing" 
+		        android:textSize="15sp"
 		        android:textStyle="bold"/>
 
 	    </RelativeLayout>
@@ -174,27 +181,28 @@
         <RelativeLayout 
             android:layout_width="wrap_content"
         	android:layout_height="match_parent"
-        	android:padding="10dp">
+        	android:padding="5dp"
+        	android:layout_marginLeft="10dp">
 		    
 		    <ImageButton
 		        android:id="@+id/imageButton6"
-		        android:layout_width="300dp"
-		        android:layout_height="300dp"
-		        android:src="@drawable/angrybirds"
+		        android:layout_width="250dp"
+		        android:layout_height="250dp"
+		        android:src="@drawable/solitaire"
 		        android:scaleType="centerInside"
 		        android:background="@android:color/transparent"/>
 		
 		    <TextView
 		        android:id="@+id/title6"
-		        android:layout_width="300dp"
+		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
 		        android:layout_below="@+id/imageButton6"
 		        android:layout_centerHorizontal="true"
 		        android:gravity="center"
-		        android:layout_marginTop="20dp"
-		        android:text="Angry Birds"
-		        android:textSize="20sp"
+		        android:layout_marginTop="8dp"
+		        android:textColor="@android:color/white"
+		        android:text="Solitaire"
+		        android:textSize="15sp"
 		        android:textStyle="bold" />
 		
 		     </RelativeLayout>
