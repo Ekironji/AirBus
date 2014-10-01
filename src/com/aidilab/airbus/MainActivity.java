@@ -12,7 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.aidilab.airbus.fragment.ConfortFragment;
+import com.aidilab.airbus.fragment.ComfortFragment;
 import com.aidilab.airbus.fragment.FilmFragment;
 import com.aidilab.airbus.fragment.GamesFragment;
 import com.aidilab.airbus.fragment.MusicFragment;
@@ -93,7 +93,7 @@ public class MainActivity extends Activity
     		break;
     	case 2:
     		fragmentManager.beginTransaction()
-		            .replace(R.id.container, new ConfortFragment())
+		            .replace(R.id.container, new ComfortFragment())
 		            .commit();
     		break;
     	case 3:
@@ -136,7 +136,7 @@ public class MainActivity extends Activity
                 mTitle = getString(R.string.title_music_section);
                 break;
             case 3:
-                mTitle = getString(R.string.title_confort_section);
+                mTitle = getString(R.string.title_comfort_section);
                 break;
             case 4:
                 mTitle = getString(R.string.title_games_section);

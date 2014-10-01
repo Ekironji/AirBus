@@ -66,7 +66,7 @@ public class ShoppingFragment extends Fragment {
         		new GridObject("Liu Jo", "€ 249", R.drawable.luijo))));
         
         categoryListview.setAdapter(new StableArrayAdapter(rootView.getContext(), 
-        		android.R.layout.simple_list_item_1, categories));
+        		R.layout.simple_list_view_layout, categories));
         
         categoryListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

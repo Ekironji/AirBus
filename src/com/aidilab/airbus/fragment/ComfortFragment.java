@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,20 +16,22 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.aidilab.airbus.MainActivity;
 import com.aidilab.airbus.R;
 
-public class ConfortFragment extends Fragment implements OnClickListener{
+public class ComfortFragment extends Fragment implements OnClickListener{
     /**
      * Returns a new instance of this fragment for the given section
      * number.
      */
-    public static ConfortFragment newInstance() {
-    	ConfortFragment fragment = new ConfortFragment();
+	
+	final String DEBUG = "Comfort Fragment";
+	
+    public static ComfortFragment newInstance() {
+    	ComfortFragment fragment = new ComfortFragment();
         return fragment;
     }
 
-    public ConfortFragment() {}
+    public ComfortFragment() {}
     
     int temp = 20;
     String degSymbol = "�";
@@ -43,7 +46,7 @@ public class ConfortFragment extends Fragment implements OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_confort, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_comfort, container, false);
         
         tempTextView = (TextView) rootView.findViewById(R.id.tempTextview);
         tempMinus = (Button) rootView.findViewById(R.id.temMinus);
@@ -63,7 +66,8 @@ public class ConfortFragment extends Fragment implements OnClickListener{
 			@Override
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
-				MainActivity.mAdkManager.writeByteArray(new byte[]{(byte)progress});
+				Log.i(DEBUG, "progress: " + progress);
+//				MainActivity.mAdkManager.writeByteArray(new byte[]{(byte)progress});
 			}
 		});
         

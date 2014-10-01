@@ -23,6 +23,10 @@ public class GridViewCustomAdapter extends ArrayAdapter<GridObject> {
              this.objects=objects;
              
      }
+     
+     public GridObject getItem(int position) {
+         return objects.get(position);
+     }
     
      public int getCount() {
              return objects.size();

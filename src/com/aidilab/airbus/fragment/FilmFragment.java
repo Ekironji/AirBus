@@ -1,14 +1,18 @@
 package com.aidilab.airbus.fragment;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +28,7 @@ import com.aidilab.airbus.gridview.GridViewCustomAdapter;
 
 public class FilmFragment extends Fragment{
 
-	final String DEBUG = "Shopping Fragment";
+	final String DEBUG = "Film Fragment";
 	View rootView;
 	GridView itemsGridView;
 	ArrayList<String> categories;
@@ -65,7 +69,7 @@ public class FilmFragment extends Fragment{
         globalMap.put("Thriller", new ArrayList<GridObject>());
 
         categoryListview.setAdapter(new StableArrayAdapter(rootView.getContext(), 
-        		android.R.layout.simple_list_item_1, categories));
+        		R.layout.simple_list_view_layout, categories));
         
         categoryListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -84,26 +88,24 @@ public class FilmFragment extends Fragment{
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View v, int position, long arg3) {
-               GridObject selected = (GridObject) itemsGridView.getItemAtPosition(position);
-               
+            	GridObject selected = (GridObject)itemsGridView.getAdapter().getItem(position);
+                Log.i(DEBUG, "pos: " + position + " - name: " + selected.getTitle());
+           		File moviePath = new File(Environment.getExternalStoragePublicDirectory(
+                   Environment.DIRECTORY_MOVIES).getAbsolutePath()+ "/" + selected.getTitle().replace(" ", "").toLowerCase() + ".mp4");
+	    	   	Log.i(DEBUG, "uri: " + moviePath.getAbsolutePath());
+				Intent intent = new Intent();
+				intent.setAction(Intent.ACTION_VIEW);
+				intent.setDataAndType(Uri.fromFile(moviePath), "video/mp4");
+				startActivity(intent);
             }
            });
         
         return rootView;
-    }
-
-    
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-    }
-    
-    
+    }    
     
     private void updateGridView(String category){
     	 itemsGridView.setAdapter(new GridViewCustomAdapter(rootView.getContext(), globalMap.get(category)));
-    }
-    
+    }  
     
     private class StableArrayAdapter extends ArrayAdapter<String> {
         HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
