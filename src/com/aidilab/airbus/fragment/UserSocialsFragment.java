@@ -41,12 +41,10 @@ public class UserSocialsFragment extends Fragment implements OnClickListener {
         facebookButton = (ImageButton) rootView.findViewById(R.id.facebookButton);
         twitterButton = (ImageButton) rootView.findViewById(R.id.twitterButton);
         googlePlusButton = (ImageButton) rootView.findViewById(R.id.googlePlusButton);
-        instagramButton = (ImageButton) rootView.findViewById(R.id.instagramButton);
         
         facebookButton.setOnClickListener(this);
         twitterButton.setOnClickListener(this);
         googlePlusButton.setOnClickListener(this);
-        instagramButton.setOnClickListener(this);
         
         return rootView;
     }
@@ -71,10 +69,6 @@ public class UserSocialsFragment extends Fragment implements OnClickListener {
 			break;
 		case R.id.googlePlusButton:
 			launchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.google.android.apps.plus");
-		    startActivity(launchIntent);
-			break;
-		case R.id.instagramButton:
-			launchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.instagram.android");
 		    startActivity(launchIntent);
 			break;
 			

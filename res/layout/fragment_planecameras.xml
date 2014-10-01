@@ -6,14 +6,54 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.aidilab.airbus.MainActivity$PlaceholderFragment" >
-    
-        <TextureView
-            android:id="@+id/camera_texture"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:keepScreenOn="true"
-            android:gravity="center"/>
+    tools:context="com.aidilab.airbus.MainActivity$PlaceholderFragment" 
+    android:background="@drawable/mappairbus">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+   
+        <LinearLayout
+            android:layout_width="320dip"
+            android:layout_height="250dip"
+            android:orientation="vertical" >
+
+            <VideoView
+                android:id="@+id/videoView1"
+	            android:layout_width="320dip"
+	            android:layout_height="280dip" />
+
+        </LinearLayout>
+        
+       <LinearLayout
+            android:layout_width="320dip"
+            android:layout_height="250dip"
+            android:orientation="vertical" >
+
+            <VideoView
+                android:id="@+id/videoView2"
+	            android:layout_width="320dip"
+	            android:layout_height="280dip" />
+
+        </LinearLayout>
+        
+                
+<!--          <LinearLayout -->
+<!--             android:layout_width="320dip" -->
+<!--             android:layout_height="250dip" -->
+<!--             android:orientation="vertical" > -->
+
+<!--             <VideoView -->
+<!--                 android:id="@+id/videoView3" -->
+<!-- 	            android:layout_width="320dip" -->
+<!-- 	            android:layout_height="280dip" /> -->
+
+<!--         </LinearLayout> -->
+        
+        
+    </LinearLayout>
 
 </RelativeLayout>

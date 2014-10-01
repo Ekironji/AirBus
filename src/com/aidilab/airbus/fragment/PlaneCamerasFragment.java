@@ -1,27 +1,22 @@
 package com.aidilab.airbus.fragment;
 
-import java.io.IOException;
-
 import android.app.Activity;
 import android.app.Fragment;
-import android.graphics.SurfaceTexture;
-import android.hardware.Camera;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.aidilab.airbus.R;
 
-public class PlaneCamerasFragment extends Fragment implements TextureView.SurfaceTextureListener {
+public class PlaneCamerasFragment extends Fragment  {
 	
 	final private String DEBUG = "AirBus PlaneCamera";
-	private Camera mCamera;
-    private Camera.CameraInfo info;
-    private TextureView mTextureView;
+
     /**
      * Returns a new instance of this fragment for the given section
      * number.
@@ -39,9 +34,52 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_planecameras, container, false);
         
-        mTextureView = (TextureView) rootView.findViewById(R.id.camera_texture);
-        mTextureView.setSurfaceTextureListener(this);
+        VideoView video1 = (VideoView) rootView.findViewById(R.id.videoView1);        
+        VideoView video2 = (VideoView) rootView.findViewById(R.id.videoView2);        
+//        VideoView video3 = (VideoView) rootView.findViewById(R.id.videoView3);
         
+        video1.setOnPreparedListener(new OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+        Uri uri = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" +
+                + R.raw.fly1);
+
+        video1.setVideoURI(uri);
+        video1.requestFocus();    
+        video1.start();
+        
+        video2.setOnPreparedListener(new OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+        Uri uri2 = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" +
+                + R.raw.fly3);
+
+        video2.setVideoURI(uri2);
+        video2.requestFocus();    
+        video2.start();
+//        
+//        video3.setOnPreparedListener(new OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mp) {
+//                mp.setLooping(true);
+//            }
+//        });
+//
+//        Uri uri3 = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" +
+//                + R.raw.fly3);
+//
+//        video3.setVideoURI(uri2);
+//        video3.requestFocus();    
+//        video3.start();
+//        
         return rootView;
     }
 
@@ -50,68 +88,4 @@ public class PlaneCamerasFragment extends Fragment implements TextureView.Surfac
         super.onAttach(activity);
     }
 
-	@Override
-	public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-		Log.i(DEBUG, "onSurfaceTextureAvailable");
-		info = new Camera.CameraInfo();
-//		Log.i(DEBUG, "num_camera: "+Camera.getNumberOfCameras());
-//		for (int i = 0; i < Camera.getNumberOfCameras(); i++) {
-//            Camera.getCameraInfo(i, info);
-//            Log.i(DEBUG, "id: " + i + "info: " + info.facing);    
-//        }
-		
-		try {
-			mCamera = Camera.open(0);
-		} catch (RuntimeException re) {
-			re.printStackTrace();
-		}
-		
-        if (null == mCamera) {
-            Toast toast = Toast.makeText(getActivity().getApplicationContext(), "No camera", Toast.LENGTH_LONG);
-            toast.show();
-        }
-        
-        //make portrait
-//        mCamera.setDisplayOrientation(90);
-        
-        try {
-			/* Tell the camera to write onto our textureView mTextureView */
-			mCamera.setPreviewTexture(surface);
-			mCamera.startPreview();
-			mCamera.autoFocus(null);
-		} catch (IOException ioe) {
-			Log.e(DEBUG, ioe.getMessage());
-		}
-	}
-
-	@Override
-	public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width,
-			int height) {
-		
-	}
-
-	@Override
-	public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-		Log.i(DEBUG, "onSurfaceTextureDestroyed");
-        if (null != mCamera) {
-            mCamera.stopPreview();
-            mCamera.release();
-            mCamera = null;
-        }
-        return true;
-	}
-
-	@Override
-	public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-		
-	}
-	
-	public void onPause() {
-        super.onPause();
-		Log.i(DEBUG, "onPause");
-        if (mCamera != null) {
-            mCamera.setPreviewCallback(null);
-            mCamera.stopPreview();
-        }
-    }
 }
