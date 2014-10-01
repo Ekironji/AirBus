@@ -8,12 +8,9 @@ import java.util.List;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -57,13 +54,13 @@ public class FilmFragment extends Fragment{
         categories.add("Thriller");
         
         globalMap = new HashMap<String, ArrayList<GridObject>>();
-        globalMap.put("Action", new ArrayList<GridObject>(Arrays.asList(new GridObject("Superman Returns", "€ 60", R.drawable.movie1),
-        		new GridObject("Indiana Jones", "€ 80", R.drawable.movie2))));
+        globalMap.put("Action", new ArrayList<GridObject>(Arrays.asList(new GridObject("Superman Returns", "(2006) dir. Bryan Singer", R.drawable.superman),
+        		new GridObject("Indiana Jones", "(1981) dir. Steven Spielberg", R.drawable.indianaj))));
         
-        globalMap.put("Cartoon", new ArrayList<GridObject>(Arrays.asList(new GridObject("Aladdin", "€ 40", R.drawable.movie3),
-        		new GridObject("The Lion King", "€ 70", R.drawable.movie4))));
+        globalMap.put("Cartoon", new ArrayList<GridObject>(Arrays.asList(new GridObject("Aladdin", "(1992) dir. Ron Clements e John Musker", R.drawable.aladdin),
+        		new GridObject("The Lion King", "(1994) dir. Rob Minkoff e Roger Allers", R.drawable.lionking))));
         
-        globalMap.put("Commedy", new ArrayList<GridObject>(Arrays.asList(new GridObject("The Hangover", "€ 350", R.drawable.movie5))));
+        globalMap.put("Commedy", new ArrayList<GridObject>(Arrays.asList(new GridObject("The Hangover", "(2009) dir. Todd Phillips", R.drawable.hangover))));
         globalMap.put("Series", new ArrayList<GridObject>());
         globalMap.put("Thriller", new ArrayList<GridObject>());
 

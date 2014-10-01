@@ -3,7 +3,6 @@ package com.aidilab.airbus.fragment;
 import android.app.Activity;
 import android.app.Fragment;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
+import com.aidilab.airbus.MainActivity;
 import com.aidilab.airbus.R;
 
 public class ConfortFragment extends Fragment implements OnClickListener{
@@ -30,7 +31,7 @@ public class ConfortFragment extends Fragment implements OnClickListener{
     public ConfortFragment() {}
     
     int temp = 20;
-    String degSymbol = "°";
+    String degSymbol = "ï¿½";
     
     TextView tempTextView      = null;
     Button tempMinus           = null;
@@ -48,7 +49,23 @@ public class ConfortFragment extends Fragment implements OnClickListener{
         tempMinus = (Button) rootView.findViewById(R.id.temMinus);
         tempPlus = (Button) rootView.findViewById(R.id.tempPlus);
         callAssistance  = (ImageButton) rootView.findViewById(R.id.assistanceButton);
-        lightIntensity = (SeekBar) rootView.findViewById(R.id.seekBar1);        
+        lightIntensity = (SeekBar) rootView.findViewById(R.id.seekBar1);  
+        lightIntensity.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {		
+			}
+			
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
+			
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
+				MainActivity.mAdkManager.writeByteArray(new byte[]{(byte)progress});
+			}
+		});
         
         tempMinus.setOnClickListener(this);
         tempPlus.setOnClickListener(this);
