@@ -33,36 +33,57 @@
 			    android:textSize="30sp"
 			    android:textColor="@color/apptheme_color" />
             
+            <ImageButton
+                android:id="@+id/seggiolinoImage"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+			    android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView1"
+                android:background="@drawable/seat"
+	        	android:layout_marginTop="20dip" />
+            
+            <TextView 
+                android:id="@+id/textViewTemp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/seggiolinoImage"
+			    android:layout_marginLeft="50dip"
+			    android:layout_marginTop="20dip"
+                android:layout_below="@+id/textView1"
+			    android:text="20°"
+			    android:textSize="40sp"
+			    android:textColor="@color/apptheme_color"/>
+            
 			<LinearLayout
 			    android:id="@+id/linearLayout1"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 	        	android:layout_marginTop="40dip"
-			    android:layout_below="@+id/textView1"
+			    android:layout_below="@+id/seggiolinoImage"
 			    android:layout_centerHorizontal="true" >
 			    
 			    <ImageButton
 			        android:id="@+id/temMinus"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
+			        android:layout_width="30dp"
+			        android:layout_height="30dp"
 			        android:layout_marginRight="15dp"
 			        android:layout_gravity="center_vertical"
 			        android:background="@drawable/meno" />
 
 			    <TextView
 			        android:id="@+id/tempTextview"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
+			        android:layout_width="60dp"
+			        android:layout_height="60dp"
 			        android:text="22°"
-			        android:textSize="50sp"
+			        android:textSize="30sp"
 			        android:textColor="@android:color/white"
 			        android:background="@drawable/temperatura_back" 
 			        android:gravity="center"/>
 
 			    <ImageButton
 			        android:id="@+id/tempPlus"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
+			        android:layout_width="30dp"
+			        android:layout_height="30dp"
 			        android:layout_marginLeft="15dp"
 			        android:layout_gravity="center_vertical"
 			        android:background="@drawable/piu" />
@@ -94,12 +115,13 @@
 
             <ImageButton
                 android:id="@+id/assistanceButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_below="@+id/textView4"
                 android:layout_marginTop="40dip"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/hostess" />
+                android:background="@drawable/hostess"
+                android:scaleType="fitXY" />
 
         </RelativeLayout>
 	   
@@ -144,16 +166,29 @@
 			android:layout_centerHorizontal="true" >
             
 	        <ImageButton
+	            android:id="@+id/lightOFFbutton"
 	            android:layout_width="wrap_content"
 	        	android:layout_height="wrap_content"
 	        	android:layout_alignParentLeft="true"
 	        	android:background="@drawable/luce_spenta"/>
 	        
 	        <ImageButton
+	            android:id="@+id/lightONbutton"
 	            android:layout_width="wrap_content"
 	        	android:layout_height="wrap_content"
 	        	android:layout_alignParentRight="true"
 	        	android:background="@drawable/luce_accesa"/>
+
+	        <TextView
+	            android:id="@+id/autoBrightnessTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:padding="15dp"
+	            android:text="Auto Brightness"
+	            android:textSize="22sp"
+	            android:textColor="@color/apptheme_color"/>
 	        
 	    </RelativeLayout>
 

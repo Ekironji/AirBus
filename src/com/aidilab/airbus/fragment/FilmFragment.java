@@ -54,8 +54,6 @@ public class FilmFragment extends Fragment{
         categories.add("Action");
         categories.add("Cartoon");
         categories.add("Commedy");
-        categories.add("Series");
-        categories.add("Thriller");
         
         globalMap = new HashMap<String, ArrayList<GridObject>>();
         globalMap.put("Action", new ArrayList<GridObject>(Arrays.asList(new GridObject("Superman Returns", "(2006) dir. Bryan Singer", R.drawable.superman),
@@ -65,8 +63,6 @@ public class FilmFragment extends Fragment{
         		new GridObject("The Lion King", "(1994) dir. Rob Minkoff e Roger Allers", R.drawable.lionking))));
         
         globalMap.put("Commedy", new ArrayList<GridObject>(Arrays.asList(new GridObject("The Hangover", "(2009) dir. Todd Phillips", R.drawable.hangover))));
-        globalMap.put("Series", new ArrayList<GridObject>());
-        globalMap.put("Thriller", new ArrayList<GridObject>());
 
         categoryListview.setAdapter(new StableArrayAdapter(rootView.getContext(), 
         		R.layout.simple_list_view_layout, categories));

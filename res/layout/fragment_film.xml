@@ -40,7 +40,8 @@
 	         android:id="@+id/categoriesListviewFilm"
 	         android:layout_width="wrap_content"
 	         android:layout_height="wrap_content"
-	         android:layout_below="@+id/categoriesTextViewFilm" >
+	         android:layout_below="@+id/categoriesTextViewFilm"
+	         android:layout_marginRight="20dp" >
         </ListView>
         
     </RelativeLayout>

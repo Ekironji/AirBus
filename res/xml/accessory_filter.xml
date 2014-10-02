@@ -2,5 +2,5 @@
 <!-- Each USB accessory can have the following attributes. The same attributes have to declared in the Arduino sketch
 running on SAM3X -->
 <resources>
-    <usb-accessory manufacturer="Aidilab" model="airbusdemo" version="1.0" />
+    <usb-accessory manufacturer="Ekironji" model="UDOO" version="1.0" />
 </resources>

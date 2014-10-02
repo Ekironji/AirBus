@@ -83,7 +83,7 @@ public class NewsFragment extends Fragment implements OnClickListener{
 		case R.id.imageButton3:
 			LaunchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.google.android.apps.genie.geniewidget");
 		    startActivity(LaunchIntent);
-						break;
+			break;
 		case R.id.imageButton4:
 			mImageView.setBackgroundResource(R.drawable.cnn_news);
 			break;

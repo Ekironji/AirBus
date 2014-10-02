@@ -32,13 +32,15 @@
             android:layout_marginTop="100dip"
             android:layout_marginBottom="20dip"
             android:text="@string/categories"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:textColor="@android:color/white" />
         
         <ListView
 	         android:id="@+id/categoriesListview"
 	         android:layout_width="wrap_content"
 	         android:layout_height="wrap_content"
-	         android:layout_below="@+id/categoriesTextView" >
+	         android:layout_below="@+id/categoriesTextView"
+	         android:layout_marginRight="20dp" >
         </ListView>
         
     </RelativeLayout>

@@ -4,17 +4,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <!-- Allows USB Accessory features -->
-    <uses-feature android:name="android.hardware.usb.accessory" />
-    
-    <!-- Allows camera features -->
-    <uses-permission android:name="android.permission.CAMERA" />
- 	<uses-feature android:name="android.hardware.camera" />
- 
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="19" />
-
+    
+    <!-- Allows USB Accessory features -->
+    <uses-feature android:name="android.hardware.usb.accessory" />
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -27,6 +23,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
             </intent-filter>
             
             <!-- Allows your application to be notified of an attached USB accessory -->
